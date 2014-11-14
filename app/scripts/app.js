@@ -23,6 +23,13 @@ angular
         templateUrl: 'views/main.html',
         controller: 'MainCtrl'
       })
+      .when('/ryhmat', {
+        templateUrl: 'views/ryhmat.html',
+        controller: 'GroupsCtrl'
+      })
+      .when('/yhteystiedot', {
+        templateUrl: 'views/yhteystiedot.html'
+      })
       .when('/about', {
         templateUrl: 'views/about.html',
         controller: 'AboutCtrl'
