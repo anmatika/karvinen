@@ -37,6 +37,10 @@ angular
         templateUrl: 'views/kuvagalleria.html',
         controller: 'KuvagalleriaCtrl'
       })
+      .when('/hallitus', {
+        templateUrl: 'views/hallitus.html',
+        controller: 'HallitusCtrl'
+      })
       .otherwise({
         redirectTo: '/'
       });
