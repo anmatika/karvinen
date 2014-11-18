@@ -30,9 +30,12 @@ angular
       .when('/yhteystiedot', {
         templateUrl: 'views/yhteystiedot.html'
       })
-      .when('/about', {
-        templateUrl: 'views/about.html',
-        controller: 'AboutCtrl'
+      .when('/retket', {
+        templateUrl: 'views/retket.html'
+      })
+      .when('/kuvagalleria', {
+        templateUrl: 'views/kuvagalleria.html',
+        controller: 'KuvagalleriaCtrl'
       })
       .otherwise({
         redirectTo: '/'

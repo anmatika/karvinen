@@ -1,6 +1,6 @@
 {
   "name": "karvinen",
-  "version": "0.0.0",
+  "version": "0.0.0-3",
   "dependencies": {},
   "devDependencies": {
     "grunt": "^0.4.1",
@@ -34,6 +34,8 @@
     "node": ">=0.10.0"
   },
   "scripts": {
-    "test": "grunt test"
-  }
+    "test": "grunt test",
+    "start": "node app"
+  },
+  "subdomain": "karvinen"
 }
