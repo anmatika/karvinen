@@ -25,7 +25,7 @@ angular
       })
       .when('/ryhmat', {
         templateUrl: 'views/ryhmat.html',
-        controller: 'GroupsCtrl'
+        controller: 'RyhmatCtrl'
       })
       .when('/yhteystiedot', {
         templateUrl: 'views/yhteystiedot.html'

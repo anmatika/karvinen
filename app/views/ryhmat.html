@@ -1,4 +1,4 @@
-<div id="ryhmat" class="row">
+<div id="ryhmat" class="row" ng-controller="RyhmatCtrl">
   <div class="box">
     <div class="col-lg-12">
       <hr>
@@ -6,7 +6,7 @@
       <strong>Viikko-ohjelma syksy 2014</strong>
       </h2>
       <hr>
-      <div class="maanantai">
+      <div class="day" ng-class="{today: monday}">
         <strong>MAANANTAI</strong>
         <ul>
           <li><span class="glyphicon glyphicon-time"></span> <strong>09.30 - 11.00</strong> <br> Pelikerho</li>
@@ -14,7 +14,7 @@
           <li><span class="glyphicon glyphicon-time"></span> <strong>13.00 - 14.30</strong> <br> Otson ATK - opetus</li>
         </ul>
       </div>
-      <div class="tiistai">
+      <div class="day" ng-class="{today: tuesday}">
         <strong>TIISTAI</strong>
         <ul>
           <li><span class="glyphicon glyphicon-time"></span> <strong>9.00</strong><br>Leivänjako</li>
@@ -24,7 +24,7 @@
           <li><span class="glyphicon glyphicon-time"></span> <strong>12.00 - 13.00</strong><br>Naisten ryhmä - toimintaa ja keskustelua, Arja</li>
         </ul>
       </div>
-      <div class="keskiviikko">
+      <div class="day" ng-class="{today: wednesday}">
         <strong>KESKIVIIKKO</strong>
         <ul>
           <li><span class="glyphicon glyphicon-time"></span> <strong>9.00 - 11.00</strong><br>Biliskerho Malmin nuorisotalolla </li>
@@ -33,7 +33,7 @@
           <li><span class="glyphicon glyphicon-time"></span> <strong>14.30 - 16.00</strong><br>Liiku ja virkisty - jumppa Syystien palvelukeskuksessa </li>
         </ul>
       </div>
-      <div class="torstai">
+      <div class="day" ng-class="{today: thursday}">
         <strong>TORSTAI</strong>
         <ul>
           <li><span class="glyphicon glyphicon-time"></span> <strong>9.00 - 11.00</strong> <br>Käsityökerho, Tuula</li>
@@ -42,7 +42,7 @@
           <li><span class="glyphicon glyphicon-time"></span> <strong>14.00 -</strong> <br>Uinti Malmin uimahallilla ( Naiset pariton, miehet parillisella viikolla )</li>
         </ul>
       </div>
-      <div class="perjantai">
+      <div class="day" ng-class="{today: friday}">
         <strong>PERJANTAI</strong>
         <ul>
           <li><span class="glyphicon glyphicon-time"></span> <strong>9.00</strong><br>Leivänjako</li>
@@ -52,13 +52,13 @@
           <li><span class="glyphicon glyphicon-time"></span> <strong>12.15 - 15.00</strong><br>Karaoke, Jartsa</li>
         </ul>
       </div>
-      <div class="lauantai">
+      <div class="day" ng-class="{today: saturday}">
         <strong>LAUANTAI</strong>
         <ul>
           Vapaata yhdessäoloa
         </ul>
       </div>
-      <div class="sunnuntai">
+      <div class="day" ng-class="{today: sunday}">
         <strong>SUNNUNTAI</strong>
             <ul>Suljettu</ul>
       </div>
