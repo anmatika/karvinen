@@ -5,7 +5,8 @@
  */
 
 body {
-    font-family: "Open Sans","Helvetica Neue",Helvetica,Arial,sans-serif;
+
+    font-family: "Hammersmith One", "Open Sans","Helvetica Neue",Helvetica,Arial,sans-serif;
     background: url('../images/nice_snow.png') no-repeat center center fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
@@ -26,7 +27,7 @@ h6 {
 }
 
 p {
-    font-size: 1.25em;
+    font-size: 1.1em;
     line-height: 1.6;
     color: #000;
 }
@@ -181,7 +182,7 @@ footer p {
         float: none;
         margin: 0 auto;
         table-layout: fixed;
-        font-size: 0.9em;
+        font-size: 1.1em;
     }
 }
 

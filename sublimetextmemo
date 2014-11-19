@@ -7,6 +7,8 @@ Select selected words on document - CTRL + D
 Duplicate line - CTRL + SHIFT + D
 Expand selection - CTRL + L
 Move line up/down - CTRL + SHIFT + UP/DOWN
+Select tag - CTRL + SHIFT + A
+Join lines - CTRL + J
 
 SHORTCUTS CUSTOMIZED
 --------------------
