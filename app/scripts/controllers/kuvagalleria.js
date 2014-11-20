@@ -1,80 +1,44 @@
 'use strict';
-
 /**
- * @ngdoc function
- * @name karvinenApp.controller:KuvagalleriaCtrl
- * @description
- * # KuvagalleriaCtrl
- * Controller of the karvinenApp
- */
-angular.module('karvinenApp')
-  .controller('KuvagalleriaCtrl', function ($scope) {
-    $scope.awesomeThings = [
-      'HTML5 Boilerplate',
-      'AngularJS',
-      'Karma'
-    ];
-	
-	$scope.slides = [
-            {image: '../../images/logo.png', description: 'Image 00'},
-            {image: '../../images/old_map.png', description: 'Image 01'}
-        ];
+* @ngdoc function
+* @name karvinenApp.controller:KuvagalleriaCtrl
+* @description
+* # KuvagalleriaCtrl
+* Controller of the karvinenApp
+*/
+// angular.module('karvinenApp')
+// .controller('KuvagalleriaCtrl', function ($scope) {
 
-        $scope.direction = 'left';
-        $scope.currentIndex = 0;
 
-        $scope.setCurrentSlideIndex = function (index) {
-            $scope.direction = (index > $scope.currentIndex) ? 'left' : 'right';
-            $scope.currentIndex = index;
-        };
+angular.module('karvinenApp').
+controller('KuvagalleriaCtrl', function ($scope) {
 
-        $scope.isCurrentSlideIndex = function (index) {
-            return $scope.currentIndex === index;
-        };
-
-        $scope.prevSlide = function () {
-            $scope.direction = 'left';
-            $scope.currentIndex = ($scope.currentIndex < $scope.slides.length - 1) ? ++$scope.currentIndex : 0;
-        };
-
-        $scope.nextSlide = function () {
-            $scope.direction = 'right';
-            $scope.currentIndex = ($scope.currentIndex > 0) ? --$scope.currentIndex : $scope.slides.length - 1;
-        };
-    })
-    .animation('.slide-animation', function () {
-        return {
-            beforeAddClass: function (element, className, done) {
-                var scope = element.scope();
-
-                if (className == 'ng-hide') {
-                    var finishPoint = element.parent().width();
-                    if(scope.direction !== 'right') {
-                        finishPoint = -finishPoint;
-                    }
-                    TweenMax.to(element, 0.5, {left: finishPoint, onComplete: done });
-                }
-                else {
-                    done();
-                }
-            },
-            removeClass: function (element, className, done) {
-                var scope = element.scope();
-
-                if (className == 'ng-hide') {
-                    element.removeClass('ng-hide');
-
-                    var startPoint = element.parent().width();
-                    if(scope.direction === 'right') {
-                        startPoint = -startPoint;
-                    }
-
-                    TweenMax.fromTo(element, 0.5, { left: startPoint }, {left: 0, onComplete: done });
-                }
-                else {
-                    done();
-                }
-            }
-        };
+ 	var IMAGE_WIDTH = 405;
+	$scope.IMAGE_LOCATION = "../images/";
+    $scope.test = "Testi";
+    // Retrieve and set data 
+    //DataSource.get("images.json",function(data) {
+        $scope.galleryData = [
+	    {
+	        "title":"Altair",
+	        "id":"ED02-0185-01",
+	        "desc":"General Atomics Aeronautical Systems, Inc., is developing the Altair version of its Predator B unmanned reconnaissance aircraft, shown here, under NASA's Environmental Research Aircraft and Sensor Technology (ERAST) project. NASA plans to use the Altair as a technology demonstrator testbed aircraft to validate a variety of command and control technologies for unmanned aerial vehicles (UAV), as well as demonstrate the capability to perform a variety of Earth science missions.",
+	        "image":"carousel_1.png"
+	    },
+	    {
+	        "title":"Altair",
+	        "id":"ED03-0078-1",
+	        "desc":"The Altair unmanned aerial vehicle (UAV), built by General Atomics Aeronautical Systems, Inc. for NASA, is poised for flight at GA-ASI's flight test facility at El Mirage, California. The Altair is a modified civil version of the QM-9 Predator B UAV developed by GA-ASI for the U.S. Air Force.",
+	        "image":"carousel_2.png"
+	    },
+	    
+		];
+        $scope.selected = $scope.galleryData[0];
+    //});
     
-  });
+  //   // Scroll to appropriate position based on image index and width
+    $scope.scrollTo = function(image,ind) {
+        $scope.listposition = {left:(IMAGE_WIDTH * ind * -1) + "px"};
+        $scope.selected = image;
+    };
+});

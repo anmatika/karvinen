@@ -9,6 +9,7 @@ Expand selection - CTRL + L
 Move line up/down - CTRL + SHIFT + UP/DOWN
 Select tag - CTRL + SHIFT + A
 Join lines - CTRL + J
+Remove tag (also ending) - CTRL + SHIFT + ; (NOTE: should switch to US keyb and ctrl+shift+ö)
 
 SHORTCUTS CUSTOMIZED
 --------------------

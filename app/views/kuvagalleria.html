@@ -1,17 +1,50 @@
-<div ng-controller="KuvagalleriaCtrl" class="container slider">
-    <img ng-repeat="slide in slides" class="slide slide-animation nonDraggableImage"
-         ng-swipe-right="nextSlide()" ng-swipe-left="prevSlide()"
-         ng-hide="!isCurrentSlideIndex($index)" ng-src="{{slide.image}}">
+<div ng-controller="KuvagalleriaCtrl">
+  {{ test }}
+</div>
 
-    <a class="arrow prev" href="#" ng-click="nextSlide()"></a>
-    <a class="arrow next" href="#" ng-click="prevSlide()"></a>
-    <nav class="nav">
-        <div class="wrapper">
-            <ul class="dots">
-                <li class="dot" ng-repeat="slide in slides">
-                    <a href="#" ng-class="{'active':isCurrentSlideIndex($index)}"
-                       ng-click="setCurrentSlideIndex($index);">{{slide.description}}</a></li>
-            </ul>
-        </div>
-    </nav>
+<div class="bg" ng-controller="KuvagalleriaCtrl">
+  
+  <!--    Layout the large images horizontally using viewwindow
+  to hide the overflow (all but the current image). -->
+  <div class="mainimageshell">
+    <div class="viewwindow">
+      <!--    fullscroller is referenced from the Controller js
+      to control scrolling -->
+      <ul id="fullscroller" class="fullsizelist" ng-style="listposition" >
+        <!--    Iterate through all images and display them end to end -->
+        <li ng-repeat="image in galleryData">
+          <img id="fullsize" class="large" ng-src="{{IMAGE_LOCATION+image.image}}" />
+        </li>
+      </ul>
+    </div>
+  </div>
+  
+  <!-- Display the description of the current image -->
+  <div class="captionshell">
+    <p class="caption">{{selected.desc}}</p>
+    {{ test }}
+  </div>
+  
+  <div style="clear:both;"></div>
+  
+  <!--    Layout the large images horizontally using viewwindow
+  to hide the overflow (all but the current image). -->
+  <div class="thumbsshell">
+    <div class="thumbswrapper">
+      <ul>
+        <!--    Iterate through all images and display them end to end as thumbs -->
+        <li ng-repeat="image in galleryData">
+          <div class="thumbwrapper">
+            <!--    Note ng-click here calls the scrollTo function found in the
+            controller and passes it its index. This is used to scroll
+            the large image to the correct image -->
+            <a ng-href="" ng-click="scrollTo(image,$index)">
+              <img class="thumbnail" ng-src="{{IMAGE_LOCATION+image.image}}" />
+            </a>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+    
 </div>

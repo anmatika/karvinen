@@ -4,7 +4,7 @@
  * @ngdoc overview
  * @name karvinenApp
  * @description
- * # karvinenApp
+ * # 
  *
  * Main module of the application.
  */
@@ -15,7 +15,8 @@ angular
     'ngResource',
     'ngRoute',
     'ngSanitize',
-    'ngTouch'
+    'ngTouch',
+    'angular-carousel'
   ])
   .config(function ($routeProvider) {
     $routeProvider
