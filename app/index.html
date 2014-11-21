@@ -4,6 +4,7 @@
     <meta charset="utf-8">
     <title></title>
     <meta name="description" content="">
+    <meta name="author" content="4ntti.matikainen@gmail.com">
     <meta name="viewport" content="width=device-width">
     <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
     <!-- build:css(.) styles/vendor.css -->
@@ -17,6 +18,7 @@
     <link rel="stylesheet" href="styles/business-casual.css"/>
     <link rel="stylesheet" href="bower_components/angular-carousel/dist/angular-carousel.css" />
     <link rel="stylesheet" href="styles/ryhmat.css"/>
+    <link rel="stylesheet" href="styles/ruokalista.css"/>
     <link rel="stylesheet" href="styles/kuvagalleria.css"/>
     <!-- endbuild -->
     <link href='http://fonts.googleapis.com/css?family=Hammersmith+One' rel='stylesheet' type='text/css'>
@@ -56,6 +58,7 @@
               <li><a ng-href="#/retket">Retket ja virkistys</a></li>
               <li><a ng-href="#/hallitus">Hallitus</a></li>
               <li><a ng-href="#/kuvagalleria">Kuvagalleria</a></li>
+              <li><a ng-href="#/ruokalista">Ruokalista</a></li>
             </ul>
           </div>
           <!-- /.navbar-collapse -->
@@ -70,10 +73,10 @@
           </span> Karvinen Ry | Malmin raitti 19, 00700 HELSINKI
           <br><span class="glyphicon glyphicon-envelope"> </span>
           <a href="mailto:tukiyhdistys@kolumbus.fi">tukiyhdistys@kolumbus.fi</a>
-          |<span class="glyphicon glyphicon-facebook"></span>
-          <a href="https://www.facebook.com/tukiyhdistys.ry?ref=ts&fref=ts">Facebook</a>
-          
-          </p>
+          | <a href="https://www.facebook.com/tukiyhdistys.ry?ref=ts&fref=ts" target="newtab"><img src="../images/fb.jpg" alt=""></a>
+      
+          <a class="reittiopas" target="_blank" href="http://www.reittiopas.fi/?showsearchformsaved=hide&from_in=&from=&via_in=&via=&via_time=0&to_in=Malmin+raitti+19+A&to=&hour=18&minute=21&timetype=departure&date_cb=on&day=14&month=1&year=2014&cmargin=3&wspeed=70&method=1&stz=0&mc1=0&mc2=0&mc3=0&mc4=0&mc5=0&mc6=0&mc0=1&nroutes=3&gotoHash=#"><img src="../images/reittiopas.png" alt=""></a>
+            </p>
         </div>
       </div>
       <!-- Google Analytics: change UA-XXXXX-X to be your site's ID -->
@@ -122,6 +125,7 @@
       <script src="scripts/controllers/ryhmat.js"></script>
       <script src="scripts/controllers/kuvagalleria2.js"></script>
       <script src="scripts/controllers/kuvagalleria3.js"></script>
+      <script src="scripts/controllers/ruokalista.js"></script>
       <!-- endbuild -->
     </body>
   </html>
