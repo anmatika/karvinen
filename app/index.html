@@ -32,7 +32,9 @@
       <div class="brand">Karvinen Ry.
       </div>
       <div class="brand">
-        <img src="images/logo.png" />
+        <a ng-href="#">
+          <img src="images/logo.png" />
+        </a>
       </div>
       <div class="address-bar">Malmin raitti 19, 00700 HELSINKI</div>
       <!-- Navigation -->
@@ -50,15 +52,15 @@
             <a class="navbar-brand" href="index.html">Tukiyhdistys Karvinen Ry.</a>
           </div>
           <!-- Collect the nav links, forms, and other content for toggling -->
-          <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+          <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1" ng-controller="HeaderCtrl">
             <ul class="nav navbar-nav">
-              <li class="active"><a ng-href="#">Koti</a></li>
-              <li><a ng-href="#/yhteystiedot">Yhteystiedot</a></li>
-              <li><a ng-href="#/ryhmat">Ryhmät</a></li>
-              <li><a ng-href="#/retket">Retket ja virkistys</a></li>
-              <li><a ng-href="#/hallitus">Hallitus</a></li>
-              <li><a ng-href="#/kuvagalleria">Kuvagalleria</a></li>
-              <li><a ng-href="#/ruokalista">Ruokalista</a></li>
+            <li ng-class="{ active: isActive('/')}"><a ng-href="#/"><span class="glyphicon glyphicon-home"></span></a></li>
+              <li ng-class="{ active: isActive('/yhteystiedot')}"><a ng-href="#/yhteystiedot">Yhteystiedot</a></li>
+              <li ng-class="{ active: isActive('/ryhmat')}"><a ng-href="#/ryhmat">Ryhmät</a></li>
+              <li ng-class="{ active: isActive('/retket')}"><a ng-href="#/retket">Retket ja virkistys</a></li>
+              <li ng-class="{ active: isActive('/hallitus')}"><a ng-href="#/hallitus">Hallitus</a></li>
+              <li ng-class="{ active: isActive('/kuvagalleria')}"><a ng-href="#/kuvagalleria">Kuvagalleria</a></li>
+              <li ng-class="{ active: isActive('/ruokalista')}"><a ng-href="#/ruokalista">Ruokalista</a></li>
             </ul>
           </div>
           <!-- /.navbar-collapse -->
@@ -114,18 +116,15 @@
       <script src="bower_components/angular-touch/angular-touch.js"></script>
       <script src="bower_components/angular-bootstrap/ui-bootstrap-tpls.js"></script>
       <!-- endbower -->
-     <!-- <script data-require="angular-ui-bootstrap@*" data-semver="0.6.0" src="http://angular-ui.github.io/bootstrap/ui-bootstrap-tpls-0.6.0.js"></script> -->
       <!-- endbuild -->
       <!-- build:js({.tmp,app}) scripts/scripts.js -->
       
       <script src="scripts/app.js"></script>
       <script src="scripts/controllers/main.js"></script>
-      <script src="scripts/controllers/about.js"></script>
+      <script src="scripts/controllers/header.js"></script>
       <script src="scripts/controllers/kuvagalleria.js"></script>
       <script src="scripts/controllers/hallitus.js"></script>
       <script src="scripts/controllers/ryhmat.js"></script>
-      <script src="scripts/controllers/kuvagalleria2.js"></script>
-      <script src="scripts/controllers/kuvagalleria3.js"></script>
       <script src="scripts/controllers/ruokalista.js"></script>
       <!-- endbuild -->
     </body>
