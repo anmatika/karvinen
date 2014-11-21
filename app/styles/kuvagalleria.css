@@ -1,9 +1,9 @@
-<style>li {
+#kuvagalleria li {
     list-style:none;
     display:inline-block;
 }
 
-ul{
+#kuvagalleria ul{
     padding:0;
     margin:0;
     white-space:nowrap;
@@ -15,14 +15,14 @@ ul{
 }
 
 .large {
-    width:405px;
+    width: 600px;
 }
 
 .mainimageshell {
     background-color:#fff;
     border-radius:8px;
     float:left;
-    width:400px;
+    width:600px;
     padding:10px;
 }
 
@@ -91,4 +91,3 @@ ul{
     border-radius:8px;
     float:left;
 }
-</style>
