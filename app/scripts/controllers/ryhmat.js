@@ -1,10 +1,10 @@
 /**
  * Created by antti on 14.11.2014.
  */
+'use strict';
+
 angular.module('karvinenApp')
   .controller('RyhmatCtrl', function ($scope) {
-    $scope.greeting = "Moi.";
-    
     var date = new Date();
     var day = date.getDay();
     switch(day){
