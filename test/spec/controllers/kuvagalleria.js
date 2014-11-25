@@ -8,6 +8,7 @@ describe('Controller: KuvagalleriaCtrl', function () {
   var KuvagalleriaCtrl,
     scope;
 
+
   // Initialize the controller and a mock scope
   beforeEach(inject(function ($controller, $rootScope) {
     scope = $rootScope.$new();
@@ -16,7 +17,12 @@ describe('Controller: KuvagalleriaCtrl', function () {
     });
   }));
 
-  it('should attach a list of awesomeThings to the scope', function () {
-    expect(scope.myInterval).toEqual(5000);
+// 
+  it('KuvagalleriaCtrl.prepareSlides should been called', function () {
+      spyOn(KuvagalleriaCtrl, 'prepareSlides').and.callThrough();
+  });
+
+  it('Expect interval to be 5000', function() {
+     expect(scope.myInterval).toBe(5000);
   });
 });

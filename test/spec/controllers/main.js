@@ -16,7 +16,9 @@ describe('Controller: MainCtrl', function () {
     });
   }));
 
-  it('should attach a list of awesomeThings to the scope', function () {
-    // expect(scope.awesomeThings.length).toBe(3);
+describe('Test to print out jasmine version', function() {
+  it('prints jasmine version', function() {
+          // console.log('jasmine-version:' + jasmine.getEnv().versionString());
+      });
   });
 });
